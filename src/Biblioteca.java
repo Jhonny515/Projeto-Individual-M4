@@ -1,7 +1,7 @@
 public class Biblioteca {
     // Atributos
     String usuario;
-    Midia midias_do_usuario;
+    Midia[] midias_do_usuario;
     Playlist[] playlists;
 
     // Getters e Setters
@@ -14,11 +14,11 @@ public class Biblioteca {
         this.usuario = usuario;
     }
 
-    public Midia getMidias_do_usuario() {
+    public Midia[] getMidias_do_usuario() {
         return midias_do_usuario;
     }
 
-    public void setMidias_do_usuario(Midia midias_do_usuario) {
+    public void setMidias_do_usuario(Midia[] midias_do_usuario) {
         this.midias_do_usuario = midias_do_usuario;
     }
 

@@ -5,8 +5,15 @@ public class Artista {
     String[] premiacoes;
     String genero;
 
-    // Getters e Setters
+    // Construtora
+    public Artista(String nome, String data_de_nascimento, String[] premiacoes, String genero) {
+        this.nome = nome;
+        this.data_de_nascimento = data_de_nascimento;
+        this.premiacoes = premiacoes;
+        this.genero = genero;
+    }
 
+    // Getters e Setters
     public String getNome() {
         return nome;
     }

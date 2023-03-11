@@ -5,8 +5,17 @@ public class Filme extends Midia {
     String diretor;
     String produtor;
 
-    // Getters e Setters
+    // Constructor
 
+    public Filme(String titulo, int ano, String genero, String duracao, String tipo, Ator[] elenco, String diretor, String produtor) {
+        super(titulo, ano, genero, duracao);
+        this.tipo = tipo;
+        this.elenco = elenco;
+        this.diretor = diretor;
+        this.produtor = produtor;
+    }
+
+    // Getters e Setters
     public String getTipo() {
         return tipo;
     }

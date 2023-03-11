@@ -2,8 +2,13 @@ public class Musico extends Artista{
     // Atributos
     String ocupacao;
 
-    // Getters e Setters
+    // Constructor
+    public Musico(String nome, String data_de_nascimento, String[] premiacoes, String genero, String ocupacao) {
+        super(nome, data_de_nascimento, premiacoes, genero);
+        this.ocupacao = ocupacao;
+    }
 
+    // Getters e Setters
     public String getOcupacao() {
         return ocupacao;
     }

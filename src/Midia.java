@@ -5,8 +5,16 @@ public class Midia {
     String genero;
     String duracao;
 
-    // Getters e Setters
+    // Constructor
 
+    public Midia(String titulo, int ano, String genero, String duracao) {
+        this.titulo = titulo;
+        this.ano = ano;
+        this.genero = genero;
+        this.duracao = duracao;
+    }
+
+    // Getters e Setters
     public String getDuracao() {
         return this.duracao;
     }
