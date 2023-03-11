@@ -4,6 +4,14 @@ public class Biblioteca {
     Midia[] midias_do_usuario;
     Playlist[] playlists;
 
+    // Construtora
+
+    public Biblioteca(String usuario, Midia[] midias_do_usuario, Playlist[] playlists) {
+        this.usuario = usuario;
+        this.midias_do_usuario = midias_do_usuario;
+        this.playlists = playlists;
+    }
+
     // Getters e Setters
 
     public String getUsuario() {
