@@ -25,8 +25,13 @@ public class Musica extends Midia {
         return this.artistas_participantes;
     }
 
-    public void setArtistas_participantes(Musico[] artistas_participantes) {
-        this.artistas_participantes = artistas_participantes;
+    public void setArtistas_participantes(Musico artista_participante) {
+        for(int i = 0; i < this.artistas_participantes.length; i++) {
+            if (this.artistas_participantes[i] == null) {
+                this.artistas_participantes[i] = artista_participante;
+                return;
+            }
+        }
     }
 
     public double getNotas() {
