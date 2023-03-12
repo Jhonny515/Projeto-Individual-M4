@@ -22,8 +22,12 @@ public class Playlist {
             return midias;
         }
 
-        public void setMidias(Midia[] midias) {
-            this.midias = midias;
-        }
+    public void setMidias(Midia midia) {
+        this.midias[this.tamanho_da_playlist] = midia;
+        this.tamanho_da_playlist++;
+    }
 
+    public int getTamanho_da_playlist() {
+        return tamanho_da_playlist;
+    }
 }

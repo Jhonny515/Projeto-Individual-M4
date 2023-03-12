@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Biblioteca {
     // Atributos
     String usuario;
@@ -36,6 +38,34 @@ public class Biblioteca {
 
     public void setPlaylists(Playlist[] playlists) {
         this.playlists = playlists;
+    }
+
+    public Midia getMidia_do_usuario(int posicao) {
+        return this.midias_do_usuario.get(posicao);
+    }
+
+    public void setMidia_do_usuario(Midia midia) {
+        this.midias_do_usuario.add(midia);
+    }
+
+    public void deleteMidia_do_usuario(Midia midia) {
+        this.midias_do_usuario.remove(midia);
+    }
+
+    public int quantidade_playlists() {
+        return this.playlists.size();
+    }
+
+    public Playlist getPlaylists(int posicao) {
+        return this.playlists.get(posicao);
+    }
+
+    public void setPlaylist(Playlist playlist) {
+        this.playlists.add(playlist);
+    }
+
+    public void deletePlaylist(Playlist playlist) {
+        this.playlists.remove(playlist);
     }
 
     // Métodos
@@ -103,7 +133,10 @@ public class Biblioteca {
 
         System.out.println("Mídias atualizadas!");
 
-        // Criando Biblioteca do usuário
+        // Criando usuário
+        Usuario user1 = new Usuario("Jhonny","user1");
+
+        // Acessando Biblioteca do usuário
         System.out.println("Checando usuário..");
 
         Biblioteca user1 = new Biblioteca("Usuário 1",null, new Playlist[1]);
