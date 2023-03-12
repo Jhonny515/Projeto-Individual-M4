@@ -1,7 +1,7 @@
 public class Usuario {
     // Atributos
     private String nome_de_usuario;
-    private Biblioteca biblioteca = new Biblioteca(null,null);
+    private Biblioteca biblioteca = new Biblioteca();
     private String id_de_acesso;
 
     // Construtor

@@ -2,42 +2,19 @@ import java.util.ArrayList;
 
 public class Biblioteca {
     // Atributos
-    String usuario;
-    Midia[] midias_do_usuario;
-    Playlist[] playlists;
+    private ArrayList<Midia> midias_do_usuario;
+    private ArrayList<Playlist> playlists;
 
     // Construtora
 
-    public Biblioteca(String usuario, Midia[] midias_do_usuario, Playlist[] playlists) {
-        this.usuario = usuario;
-        this.midias_do_usuario = midias_do_usuario;
-        this.playlists = playlists;
+    public Biblioteca() {
+        this.midias_do_usuario = new ArrayList<Midia>();
+        this.playlists = new ArrayList<Playlist>();
     }
 
     // Getters e Setters
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public Midia[] getMidias_do_usuario() {
-        return midias_do_usuario;
-    }
-
-    public void setMidias_do_usuario(Midia[] midias_do_usuario) {
-        this.midias_do_usuario = midias_do_usuario;
-    }
-
-    public Playlist[] getPlaylists() {
-        return playlists;
-    }
-
-    public void setPlaylists(Playlist[] playlists) {
-        this.playlists = playlists;
+    public int quantidade_midias() {
+        return this.midias_do_usuario.size();
     }
 
     public Midia getMidia_do_usuario(int posicao) {
@@ -70,9 +47,12 @@ public class Biblioteca {
 
     // Métodos
     public void tocar_playlist(Playlist playlist) {
-        for (int i = 0; i < playlist.midias.length; i++) {
-            if (playlist.midias[i] != null) {
-                Player.reproduzir(playlist.midias[i].titulo);
+        int tamanho_playlist = playlist.getTamanho_da_playlist();
+        Midia[] midias = playlist.getMidias();
+
+        for (int i = 0; i < tamanho_playlist; i++) {
+            if (midias[i] != null) {
+                Player.reproduzir(midias[i].titulo);
             }
         }
     }
@@ -139,22 +119,23 @@ public class Biblioteca {
         // Acessando Biblioteca do usuário
         System.out.println("Checando usuário..");
 
-        Biblioteca user1 = new Biblioteca("Usuário 1",null, new Playlist[1]);
+        Biblioteca user1_biblioteca = user1.getBiblioteca();
+
         // Criando Playlist
         System.out.println("Checando playlists..");
 
-        Playlist user1_playlist1 = new Playlist("Música",new Midia[2]);
-        user1_playlist1.midias[0] = mid2;
-        user1_playlist1.midias[1] = mid3;
+        Playlist user1_playlist1 = new Playlist("Música");
+        user1_playlist1.setMidias(mid2);
+        user1_playlist1.setMidias(mid3);
 
-        user1.playlists[0] = user1_playlist1;
+        user1_biblioteca.setPlaylist(user1_playlist1);
 
         System.out.println("Playlist atualizadas!");
 
         // Tocando playlist
         System.out.println("Executando playlist do usuário.");
 
-        user1.tocar_playlist(user1.playlists[0]);
+        user1_biblioteca.tocar_playlist(user1_biblioteca.getPlaylists(0));
 
         // Finalizando aplicação
         System.out.println("Estamos sempre aqui. Estamos sempre em todo lugar.");
