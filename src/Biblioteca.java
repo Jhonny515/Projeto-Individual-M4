@@ -86,6 +86,8 @@ public class Biblioteca {
         musicista2.premiacoes[1] = "Vocalista do Ano 2022";
         musicista2.premiacoes[2] = "Grammy";
 
+        Musico musicista3 = new Musico("Dennis","25/08/1959",null,"Masculino","Baixista");
+
         System.out.println("Lista de artistas atualizada!");
 
         // Criando mídias
@@ -106,6 +108,11 @@ public class Biblioteca {
         musica1.artistas_participantes[0] = musicista1;
 
         Musica musica2 = new Musica("Ageó da Viola",2002, "Instrumental", "4:15", musicista1, null, 4.5);
+
+        Musica musica3 = new Musica("Violando Tocão",2003,"Instrumental","3:37", musicista1,new Musico[3],4.3);
+        musica3.setArtistas_participantes(musicista1);
+        musica3.setArtistas_participantes(musicista2);
+        musica3.setArtistas_participantes(musicista3);
 
         Midia mid1 = filme1;
         Midia mid2 = musica1;
