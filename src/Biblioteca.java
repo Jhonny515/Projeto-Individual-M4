@@ -59,7 +59,7 @@ public class Biblioteca {
 
     // main
     public static void main(String[] args) {
-        System.out.println("TODAS MÍDIA EM TODO LUGAR AO MESMO TEMPO");
+        System.out.println("TODA MÍDIA EM TODO LUGAR AO MESMO TEMPO");
         System.out.println("Iniciando biblioteca do usuário...");
 
         // Criando Artistas
