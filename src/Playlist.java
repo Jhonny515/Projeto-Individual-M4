@@ -11,7 +11,7 @@ public class Playlist {
         this.tipo_de_midia = tipo_de_midia;
         this.midias = new Midia[500];
         this.ordem_de_execucao = new int[500];
-        this.midia_atual = 0;
+        this.midia_atual = this.ordem_de_execucao[0];
         this.tamanho_da_playlist = 0;
     }
 
