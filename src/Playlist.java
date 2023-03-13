@@ -66,6 +66,7 @@ public class Playlist {
         }
         return nome_midia_anterior;
     }
+
     public String proxima_midia() {
         String nome_proxima_midia = null;
         for (int i = 0; i < this.tamanho_da_playlist; i++) {
@@ -75,11 +76,12 @@ public class Playlist {
         }
         return nome_proxima_midia;
     }
+
     public void misturar_midias() {
         Random embaralhar = new Random(); // Classe com método que retorna número aleatório
         int tamanho_da_playlist = this.tamanho_da_playlist;
 
-        for (int i=0; i < tamanho_da_playlist; i++) {
+        for (int i = 0; i < tamanho_da_playlist; i++) {
 
             // pega número aleatório, conforme o tamanho da playlist e salva
             int rand = embaralhar.nextInt(tamanho_da_playlist);

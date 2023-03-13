@@ -1,4 +1,4 @@
-public class Musico extends Artista{
+public class Musico extends Artista {
     // Atributos
     private String ocupacao;
 

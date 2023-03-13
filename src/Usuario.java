@@ -5,7 +5,7 @@ public class Usuario {
     private String id_de_acesso;
 
     // Construtor
-    public Usuario(String nome_de_usuario,  String id_de_acesso) {
+    public Usuario(String nome_de_usuario, String id_de_acesso) {
         this.nome_de_usuario = nome_de_usuario;
         this.id_de_acesso = id_de_acesso;
     }

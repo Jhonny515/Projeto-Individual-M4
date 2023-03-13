@@ -26,12 +26,16 @@ public class Musica extends Midia {
     }
 
     public void setArtistas_participantes(Musico artista_participante) {
-        for(int i = 0; i < this.getArtistas_participantes().length; i++) {
+        for (int i = 0; i < this.getArtistas_participantes().length; i++) {
             if (this.getArtistas_participantes()[i] == null) {
                 this.getArtistas_participantes()[i] = artista_participante;
                 return;
             }
         }
+    }
+
+    public void setArtistas_participantes(Musico[] artistas_participantes) {
+        this.artistas_participantes = artistas_participantes;
     }
 
     public double getNotas() {
@@ -48,10 +52,6 @@ public class Musica extends Midia {
 
     public void setArtista_principal(Musico artista_principal) {
         this.artista_principal = artista_principal;
-    }
-
-    public void setArtistas_participantes(Musico[] artistas_participantes) {
-        this.artistas_participantes = artistas_participantes;
     }
 
     public double getNota() {
