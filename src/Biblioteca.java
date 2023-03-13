@@ -68,21 +68,21 @@ public class Biblioteca {
         System.out.println("Checando artistas");
 
         // Atores e Atrizes
-        Ator act1 = new Ator("Corey Baxter","25/10/2000",new String[1],"Masculino",null);
+        Ator act1 = new Ator("Carey Becsteer","25/10/2000",new String[1],"Masculino",null);
         // premiações do act1
         act1.setPremiacoes("Paper Globe");
 
-        Ator act2 = new Ator("Raven Simonee","10/12/1985",new String[2],"Feminino","Academy of Art University");
+        Ator act2 = new Ator("Raven Becsteer","10/12/1985",new String[2],"Feminino","Academy of Art University");
         // premiações do act1
-        act2.setPremiacoes("Nickelodeon Kids' Choice Award: Atriz de TV Favorita");
-        act2.setPremiacoes("TV Land: Impact");
+        act2.setPremiacoes("Nideonckelo Kids' Choice Award: Atriz de TV Favorita");
+        act2.setPremiacoes("TV La: Impactei");
 
-        Ator act3 = new Ator("Chelsea Daniels","11/09/1985",null,"Feminino","Academy of Art University");
+        Ator act3 = new Ator("Chelsea Danieles","11/09/1985",null,"Feminino","Academy of Art University");
 
         // Músicistas
         Musico musicista1 = new Musico("Cleidisvaldo","25/04/1989",null,"Masculino","Violonista");
 
-        Musico musicista2 = new Musico("Ariana","29/09/1992",new String[3],"Não Binário","Vocalista");
+        Musico musicista2 = new Musico("Arianna Pequena","29/09/1992",new String[3],"Não Binário","Vocalista");
         // premiações de musici2
         musicista2.setPremiacoes("Vocalista do Ano 2021");
         musicista2.setPremiacoes("Vocalista do Ano 2022");
@@ -100,8 +100,8 @@ public class Biblioteca {
                 "1:15",
                 "Longa",
                 new Ator[3],
-                "Raven Baxter",
-                "Chelsea Daniels");
+                "Raven Becsteer",
+                "Chelsea Danieles");
         filme1.getElenco()[0] = act1;
         filme1.getElenco()[1] = act2;
         filme1.getElenco()[2] = act3;
