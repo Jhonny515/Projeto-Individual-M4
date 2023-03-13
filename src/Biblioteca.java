@@ -49,11 +49,11 @@ public class Biblioteca {
     public void tocar_playlist(Playlist playlist) {
         int tamanho_playlist = playlist.getTamanho_da_playlist();
         Midia[] midias = playlist.getMidias();
+        int midia_atual = playlist.getMidia_atual();
 
-        for (int i = 0; i < tamanho_playlist; i++) {
-            if (midias[i] != null) {
-                Player.reproduzir(midias[i].getTitulo());
-            }
+        while (midia_atual < tamanho_playlist) {
+            Player.reproduzir(midias[midia_atual].getTitulo());
+            midia_atual++;
         }
     }
 
