@@ -32,6 +32,7 @@ public class Playlist {
 
     public void setMidias(Midia midia) {
         this.midias[this.tamanho_da_playlist] = midia;
+        this.ordem_de_execucao[tamanho_da_playlist] = tamanho_da_playlist;
         this.tamanho_da_playlist++;
     }
 
