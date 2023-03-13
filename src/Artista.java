@@ -1,9 +1,9 @@
 public class Artista {
     // Atributos
-    String nome;
-    String data_de_nascimento;
-    String[] premiacoes;
-    String genero;
+    private String nome;
+    private String data_de_nascimento;
+    private String[] premiacoes;
+    private String genero;
 
     // Construtora
     public Artista(String nome, String data_de_nascimento, String[] premiacoes, String genero) {
@@ -34,8 +34,13 @@ public class Artista {
         return premiacoes;
     }
 
-    public void setPremiacoes(String[] premiacoes) {
-        this.premiacoes = premiacoes;
+    public void setPremiacoes(String premiacoes) {
+        int tamanho_premiacoes = this.premiacoes.length;
+        int i = 0;
+        while (this.premiacoes[i] != null) {
+            i++;
+        }
+        this.premiacoes[i] = premiacoes;
     }
 
     public String getGenero() {

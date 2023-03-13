@@ -1,6 +1,6 @@
 public class Musico extends Artista{
     // Atributos
-    String ocupacao;
+    private String ocupacao;
 
     // Constructor
     public Musico(String nome, String data_de_nascimento, String[] premiacoes, String genero, String ocupacao) {

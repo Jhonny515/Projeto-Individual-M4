@@ -52,7 +52,7 @@ public class Biblioteca {
 
         for (int i = 0; i < tamanho_playlist; i++) {
             if (midias[i] != null) {
-                Player.reproduzir(midias[i].titulo);
+                Player.reproduzir(midias[i].getTitulo());
             }
         }
     }
@@ -68,12 +68,12 @@ public class Biblioteca {
         // Atores e Atrizes
         Ator act1 = new Ator("Corey Baxter","25/10/2000",new String[1],"Masculino",null);
         // premiações do act1
-        act1.premiacoes[0] = "Paper Globe";
+        act1.setPremiacoes("Paper Globe");
 
         Ator act2 = new Ator("Raven Simonee","10/12/1985",new String[2],"Feminino","Academy of Art University");
         // premiações do act1
-        act2.premiacoes[0] = "Nickelodeon Kids' Choice Award: Atriz de TV Favorita";
-        act2.premiacoes[1] = "TV Land: Impact";
+        act2.setPremiacoes("Nickelodeon Kids' Choice Award: Atriz de TV Favorita");
+        act2.setPremiacoes("TV Land: Impact");
 
         Ator act3 = new Ator("Chelsea Daniels","11/09/1985",null,"Feminino","Academy of Art University");
 
@@ -82,9 +82,9 @@ public class Biblioteca {
 
         Musico musicista2 = new Musico("Ariana","29/09/1992",new String[3],"Não Binário","Vocalista");
         // premiações de musici2
-        musicista2.premiacoes[0] = "Vocalista do Ano 2021";
-        musicista2.premiacoes[1] = "Vocalista do Ano 2022";
-        musicista2.premiacoes[2] = "Grammy";
+        musicista2.setPremiacoes("Vocalista do Ano 2021");
+        musicista2.setPremiacoes("Vocalista do Ano 2022");
+        musicista2.setPremiacoes("Grammy");
 
         Musico musicista3 = new Musico("Dennis","25/08/1959",null,"Masculino","Baixista");
 
@@ -100,12 +100,12 @@ public class Biblioteca {
                 new Ator[3],
                 "Raven Baxter",
                 "Chelsea Daniels");
-        filme1.elenco[0] = act1;
-        filme1.elenco[1] = act2;
-        filme1.elenco[2] = act3;
+        filme1.getElenco()[0] = act1;
+        filme1.getElenco()[1] = act2;
+        filme1.getElenco()[2] = act3;
 
         Musica musica1 = new Musica("Obrigada, anterior",2007,"Pop","3:57",musicista2,new Musico[1],4.8);
-        musica1.artistas_participantes[0] = musicista1;
+        musica1.getArtistas_participantes()[0] = musicista1;
 
         Musica musica2 = new Musica("Ageó da Viola",2002, "Instrumental", "4:15", musicista1, null, 4.5);
 

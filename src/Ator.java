@@ -1,6 +1,6 @@
 public class Ator extends Artista {
     // Atributos
-    String formacao;
+    private String formacao;
 
     // Constructor
 

@@ -1,17 +1,17 @@
 public class Midia {
     // Atributos
-    String titulo;
-    int ano;
-    String genero;
-    String duracao;
+    private String titulo;
+    private int ano;
+    private String genero;
+    private String duracao;
 
     // Constructor
 
     public Midia(String titulo, int ano, String genero, String duracao) {
-        this.titulo = titulo;
-        this.ano = ano;
-        this.genero = genero;
-        this.duracao = duracao;
+        this.setTitulo(titulo);
+        this.setAno(ano);
+        this.setGenero(genero);
+        this.setDuracao(duracao);
     }
 
     // Getters e Setters

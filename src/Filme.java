@@ -1,18 +1,18 @@
 public class Filme extends Midia {
     // Atributos
-    String tipo;
-    Ator[] elenco;
-    String diretor;
-    String produtor;
+    private String tipo;
+    private Ator[] elenco;
+    private String diretor;
+    private String produtor;
 
     // Constructor
 
     public Filme(String titulo, int ano, String genero, String duracao, String tipo, Ator[] elenco, String diretor, String produtor) {
         super(titulo, ano, genero, duracao);
         this.tipo = tipo;
-        this.elenco = elenco;
-        this.diretor = diretor;
-        this.produtor = produtor;
+        this.setElenco(elenco);
+        this.setDiretor(diretor);
+        this.setProdutor(produtor);
     }
 
     // Getters e Setters
